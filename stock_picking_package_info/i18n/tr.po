@@ -19,392 +19,392 @@ msgstr ""
 #: field:stock.picking,num_packages:0
 #: field:stock.picking.package.total,quantity:0
 msgid "# Packages"
-msgstr ""
+msgstr "# Packages"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "Address:"
-msgstr ""
+msgstr "Address:"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "Client:"
-msgstr ""
+msgstr "Client:"
 
 #. module: stock_picking_package_info
 #: view:stock.quant.package:stock_picking_package_info.stock_quant_package_info_form_view
 msgid "Content"
-msgstr ""
+msgstr "İçerik"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.total,create_uid:0
 #: field:stock.picking.package.weight.lot,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Created by"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.total,create_date:0
 #: field:stock.picking.package.weight.lot,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Created on"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.total,display_name:0
 #: field:stock.picking.package.weight.lot,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Display Name"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,empty_weight:0
 msgid "Empty Package Weight"
-msgstr ""
+msgstr "Empty Package Weight"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.weight.lot,gross_weight:0
 msgid "Gross Weight"
-msgstr ""
+msgstr "Gross Weight"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "Gross Weight:"
-msgstr ""
+msgstr "Gross Weight:"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,height:0
 msgid "Height"
-msgstr ""
+msgstr "Height"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.total,id:0
 #: field:stock.picking.package.weight.lot,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.total,__last_update:0
 #: field:stock.picking.package.weight.lot,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Last Modified on"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.total,write_uid:0
 #: field:stock.picking.package.weight.lot,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Last Updated by"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.total,write_date:0
 #: field:stock.picking.package.weight.lot,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Last Updated on"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,length:0
 msgid "Length"
-msgstr ""
+msgstr "Length"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.total,ul:0
 msgid "Logistic Unit"
-msgstr ""
+msgstr "Logistic Unit"
 
 #. module: stock_picking_package_info
 #: view:stock.picking.package.weight.lot:stock_picking_package_info.stock_picking_package_weight_lot_form_view
 msgid "Lots"
-msgstr ""
+msgstr "Lots"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.weight.lot,lots:0
 msgid "Lots/Serial Numbers"
-msgstr ""
+msgstr "Lots/Serial Numbers"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "NET Weight:"
-msgstr ""
+msgstr "NET Weight:"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.weight.lot,net_weight:0
 #: field:stock.quant,weight_net:0
 msgid "Net Weight"
-msgstr ""
+msgstr "Net Weight"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "Number of lots:"
-msgstr ""
+msgstr "Number of lots:"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "Operations"
-msgstr ""
+msgstr "Operasyonlar"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.weight.lot,package:0
 msgid "Package"
-msgstr ""
+msgstr "Package"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "Package number:"
-msgstr ""
+msgstr "Package number:"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "Package:"
-msgstr ""
+msgstr "Package:"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 #: field:stock.picking,packages:0
 msgid "Packages"
-msgstr ""
+msgstr "Packages"
 
 #. module: stock_picking_package_info
 #: field:stock.picking,packages_info:0
 msgid "Packages Info"
-msgstr ""
+msgstr "Packages Info"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,permitted_volume:0
 msgid "Permitted volume"
-msgstr ""
+msgstr "Permitted volume"
 
 #. module: stock_picking_package_info
 #: model:ir.model,name:stock_picking_package_info.model_stock_quant_package
 msgid "Physical Packages"
-msgstr ""
+msgstr "Fiziksel Paketler"
 
 #. module: stock_picking_package_info
 #: model:ir.model,name:stock_picking_package_info.model_stock_picking
 msgid "Picking List"
-msgstr ""
+msgstr "Alım Listesi"
 
 #. module: stock_picking_package_info
 #: model:ir.actions.report.xml,name:stock_picking_package_info.label_creator_palet_report
 msgid "Picking palet label"
-msgstr ""
+msgstr "Picking palet label"
 
 #. module: stock_picking_package_info
 #: model:ir.model,name:stock_picking_package_info.model_stock_transfer_details
 msgid "Picking wizard"
-msgstr ""
+msgstr "Toplama sihirbazı"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "Picking:"
-msgstr ""
+msgstr "Picking:"
 
 #. module: stock_picking_package_info
 #: view:stock.quant.package:stock_picking_package_info.stock_quant_package_info_form_view
 #: field:stock.quant.package,pickings:0
 msgid "Pickings"
-msgstr ""
+msgstr "Pickings"
 
 #. module: stock_picking_package_info
 #: model:ir.model,name:stock_picking_package_info.model_stock_quant
 msgid "Quants"
-msgstr ""
+msgstr "Stoklar"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,real_weight:0
 msgid "Real Weight"
-msgstr ""
+msgstr "Real Weight"
 
 #. module: stock_picking_package_info
 #: view:stock.transfer_details:stock_picking_package_info.view_stock_enter_transfer_details_inh_packageinfo
 msgid "Save for later"
-msgstr ""
+msgstr "Save for later"
 
 #. module: stock_picking_package_info
 #: field:stock.picking.package.weight.lot,sequence:0
 msgid "Sequence"
-msgstr ""
+msgstr "Sequence"
 
 #. module: stock_picking_package_info
 #: model:ir.model,name:stock_picking_package_info.model_stock_picking_package_total
 msgid "Stock Picking Package Total"
-msgstr ""
+msgstr "Stock Picking Package Total"
 
 #. module: stock_picking_package_info
 #: model:ir.model,name:stock_picking_package_info.model_stock_picking_package_weight_lot
 #: view:stock.picking.package.weight.lot:stock_picking_package_info.stock_picking_package_weight_lot_form_view
 msgid "Stock Picking Package Weight Total"
-msgstr ""
+msgstr "Stock Picking Package Weight Total"
 
 #. module: stock_picking_package_info
 #: help:stock.quant,weight:0
 msgid "The gross weight in Kg."
-msgstr ""
+msgstr "The gross weight in Kg."
 
 #. module: stock_picking_package_info
 #: help:stock.quant.package,height:0
 msgid "The height of the package"
-msgstr ""
+msgstr "The height of the package"
 
 #. module: stock_picking_package_info
 #: help:stock.quant.package,length:0
 msgid "The length of the package"
-msgstr ""
+msgstr "The length of the package"
 
 #. module: stock_picking_package_info
 #: help:stock.quant,weight_net:0
 msgid "The net weight in Kg."
-msgstr ""
+msgstr "The net weight in Kg."
 
 #. module: stock_picking_package_info
 #: help:stock.quant,volume:0
 msgid "The volume in m3."
-msgstr ""
+msgstr "The volume in m3."
 
 #. module: stock_picking_package_info
 #: help:stock.quant.package,width:0
 msgid "The width of the package"
-msgstr ""
+msgstr "The width of the package"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,total_estim_weight_net:0
 msgid "Total Estimated Net Weight"
-msgstr ""
+msgstr "Total Estimated Net Weight"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,total_estim_weight:0
 msgid "Total Estimated Weight"
-msgstr ""
+msgstr "Total Estimated Weight"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,total_weight_net:0
 msgid "Total Net Weight"
-msgstr ""
+msgstr "Total Net Weight"
 
 #. module: stock_picking_package_info
 #: field:stock.quant,total_weight_net:0
 msgid "Total Net weight"
-msgstr ""
+msgstr "Total Net weight"
 
 #. module: stock_picking_package_info
 #: field:stock.picking,package_totals:0
 msgid "Total UL Packages Info"
-msgstr ""
+msgstr "Total UL Packages Info"
 
 #. module: stock_picking_package_info
 #: field:stock.quant,total_volume:0
 #: field:stock.quant.package,total_volume:0
 msgid "Total Volume"
-msgstr ""
+msgstr "Total Volume"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,total_weight:0
 msgid "Total Weight"
-msgstr ""
+msgstr "Total Weight"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "Total Weight and Lots by package"
-msgstr ""
+msgstr "Total Weight and Lots by package"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "Total packages by logistic unit"
-msgstr ""
+msgstr "Total packages by logistic unit"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,tvolume_charge:0
 msgid "Total volume charge"
-msgstr ""
+msgstr "Total volume charge"
 
 #. module: stock_picking_package_info
 #: field:stock.quant,total_weight:0
 msgid "Total weight"
-msgstr ""
+msgstr "Total weight"
 
 #. module: stock_picking_package_info
 #: view:website:stock_picking_package_info.label_creator_palet_report_document
 msgid "Type:"
-msgstr ""
+msgstr "Type:"
 
 #. module: stock_picking_package_info
 #: field:stock.quant,volume:0
 msgid "Volume"
-msgstr ""
+msgstr "Volume"
 
 #. module: stock_picking_package_info
 #: field:stock.quant,weight:0
 msgid "Weight"
-msgstr ""
+msgstr "Weight"
 
 #. module: stock_picking_package_info
 #: field:stock.quant.package,width:0
 msgid "Width"
-msgstr ""
+msgstr "Width"
 
 #. module: stock_picking_package_info
 #: view:stock.transfer_details:stock_picking_package_info.view_stock_enter_transfer_details_inh_packageinfo
 msgid "You are going to transfer. Are you sure?"
-msgstr ""
+msgstr "You are going to transfer. Are you sure?"
 
 #. module: stock_picking_package_info
 #: view:stock.quant.package:stock_picking_package_info.stock_quant_package_info_tree_view
 msgid "base.group_multi_company"
-msgstr ""
+msgstr "base.group_multi_company"
 
 #. module: stock_picking_package_info
 #: view:stock.transfer_details:stock_picking_package_info.view_stock_enter_transfer_details_inh_packageinfo
 msgid "or"
-msgstr ""
+msgstr "veya"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "sum_empty_weight"
-msgstr ""
+msgstr "sum_empty_weight"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "sum_estim_weight_net"
-msgstr ""
+msgstr "sum_estim_weight_net"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "sum_gross_weight"
-msgstr ""
+msgstr "sum_gross_weight"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "sum_net_weight"
-msgstr ""
+msgstr "sum_net_weight"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "sum_quantity"
-msgstr ""
+msgstr "sum_quantity"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "sum_real_weight"
-msgstr ""
+msgstr "sum_real_weight"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "sum_total_estim_weight"
-msgstr ""
+msgstr "sum_total_estim_weight"
 
 #. module: stock_picking_package_info
 #: view:stock.quant.package:stock_picking_package_info.stock_quant_package_info_form_view
 msgid "sum_total_volume"
-msgstr ""
+msgstr "sum_total_volume"
 
 #. module: stock_picking_package_info
 #: view:stock.quant.package:stock_picking_package_info.stock_quant_package_info_form_view
 msgid "sum_total_weight"
-msgstr ""
+msgstr "sum_total_weight"
 
 #. module: stock_picking_package_info
 #: view:stock.quant.package:stock_picking_package_info.stock_quant_package_info_form_view
 msgid "sum_total_weight_net"
-msgstr ""
+msgstr "sum_total_weight_net"
 
 #. module: stock_picking_package_info
 #: view:stock.picking:stock_picking_package_info.stock_picking_package_info_form_view
 msgid "sum_tvolume_charge"
-msgstr ""
+msgstr "sum_tvolume_charge"
 

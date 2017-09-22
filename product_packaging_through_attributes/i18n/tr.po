@@ -18,36 +18,36 @@ msgstr ""
 #. module: product_packaging_through_attributes
 #: field:product.attribute,is_package:0
 msgid "Is package"
-msgstr ""
+msgstr "Paket mi"
 
 #. module: product_packaging_through_attributes
 #: field:res.partner,partner_product_ul:0
 msgid "Logistic Unit"
-msgstr ""
+msgstr "Lojistik Birim"
 
 #. module: product_packaging_through_attributes
 #: field:product.attribute.value,package_product:0
 #: field:product.packaging,product:0
 msgid "Package Product"
-msgstr ""
+msgstr "Paketleme Ürünü"
 
 #. module: product_packaging_through_attributes
 #: field:product.attribute.value,is_package_attr:0
 msgid "Package attribute"
-msgstr ""
+msgstr "Paket özelliği"
 
 #. module: product_packaging_through_attributes
 #: model:ir.model,name:product_packaging_through_attributes.model_product_packaging
 msgid "Packaging"
-msgstr ""
+msgstr "Paketleme"
 
 #. module: product_packaging_through_attributes
 #: model:ir.model,name:product_packaging_through_attributes.model_res_partner
 msgid "Partner"
-msgstr ""
+msgstr "İş ortağı"
 
 #. module: product_packaging_through_attributes
 #: model:ir.model,name:product_packaging_through_attributes.model_product_attribute
 msgid "Product Attribute"
-msgstr ""
+msgstr "Ürün Özelliği"
 

@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_variants_types
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-22 06:42+0000\n"
+"PO-Revision-Date: 2017-09-22 06:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_variants_types
+#: field:product.configurator.attribute,custom_value:0
+msgid "Custom value"
+msgstr ""
+
+#. module: product_variants_types
+#: code:addons/product_variants_types/models/product_configurator.py:28
+#, python-format
+msgid "Custom value for attribute '%s' must be between %s and %s."
+msgstr ""
+
+#. module: product_variants_types
+#: model:ir.model,name:product_variants_types.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: product_variants_types
+#: model:ir.model,name:product_variants_types.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: product_variants_types
+#: field:product.configurator.attribute,attr_type:0
+msgid "Type"
+msgstr ""
+
+#. module: product_variants_types
+#: code:addons/product_variants_types/models/product_product.py:30
+#, python-format
+msgid "You have to fill the following attributes:\n"
+"%s"
+msgstr ""
+

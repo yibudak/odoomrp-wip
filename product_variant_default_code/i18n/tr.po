@@ -18,51 +18,51 @@ msgstr ""
 #. module: product_variant_default_code
 #: field:product.attribute.value,attribute_code:0
 msgid "Attribute Code"
-msgstr ""
+msgstr "Özellik Kodu"
 
 #. module: product_variant_default_code
 #: code:addons/product_variant_default_code/models/product.py:157
 #: sql_constraint:product.attribute:0
 #, python-format
 msgid "Attribute Name must be unique!"
-msgstr ""
+msgstr "Özellik adı tekil olmalı!"
 
 #. module: product_variant_default_code
 #: code:addons/product_variant_default_code/models/product.py:48
 #, python-format
 msgid "Error"
-msgstr ""
+msgstr "Hata"
 
 #. module: product_variant_default_code
 #: code:addons/product_variant_default_code/models/product.py:48
 #, python-format
 msgid "Found unrecognized attribute name in \"Variant Reference Mask\""
-msgstr ""
+msgstr "Tanımlanamayan özellik adı bulundu  \"Çeşit Referans Maskesi\""
 
 #. module: product_variant_default_code
 #: field:product.product,manual_code:0
 msgid "Manual code"
-msgstr ""
+msgstr "Manuel kod"
 
 #. module: product_variant_default_code
 #: field:product.product,packagings:0
 msgid "Packagings"
-msgstr ""
+msgstr "Paketler"
 
 #. module: product_variant_default_code
 #: model:ir.model,name:product_variant_default_code.model_product_product
 msgid "Product"
-msgstr ""
+msgstr "Ürün"
 
 #. module: product_variant_default_code
 #: model:ir.model,name:product_variant_default_code.model_product_attribute
 msgid "Product Attribute"
-msgstr ""
+msgstr "Ürün Özelliği"
 
 #. module: product_variant_default_code
 #: model:ir.model,name:product_variant_default_code.model_product_template
 msgid "Product Template"
-msgstr ""
+msgstr "Ürün Şablonu"
 
 #. module: product_variant_default_code
 #: help:product.product,reference_mask:0
@@ -76,11 +76,19 @@ msgid "Reference mask for building internal references of a variant generated fr
 "When setting Variant reference mask to `[Color]-[Size]`, the default code on the variants will be something like `r-l` `b-l` `r-x` ...\n"
 "If you like, You can even have the attribute name appear more than once in the mask. Such as , `fancyA/[Size]~[Color]~[Size]` When saved, the default code on variants will be something like `fancyA/l~r~l` (for variant with Color \"Red\" and Size \"L\") `fancyA/x~y~x` (for variant with Color \"Yellow\" and Size \"XL\")\n"
 "Note: make sure characters \"[,]\" do not appear in your attribute name"
-msgstr ""
+msgstr "Reference mask for building internal references of a variant generated from this template.\n"
+"Example:\n"
+"ABC adında Ölçü ve Renk seçenekleri olan bir ürün için\n"
+"Ürün: ABC\n"
+"Renk: Kırmızı(r), Sarı(y), Siyah(b)  #Kırmızı, Sarı, Siyah özellik değerleri, `r`, `y`, `b` bunların kod kısaltmaları\n"
+"Olcu: L (l), XL(x)\n"
+"Çeşit referans maskesini `[renk]-[Olcu]`, yaptığınızda ürün çeşitlerindeki kodlar `r-l` `b-l` `r-x` gibi olacaklar...\n"
+"Eğer isterseniz özellik kodu birden fazla sefer kod içinde geçebilir ör , `fancyA/[Olcu]~[renk]~[Olcu]` Saklandığında, çeşitlerdeki kodlar  `fancyA/l~r~l` gibi olacak (Rengi kırmızı ölçüsü l olan çeşit için) `fancyA/x~y~x` (Rengi \"Yellow\" boyutu \"XL\")\n"
+"Not: Özellik adınızın içinde  \"[,]\" karakterlerinin olmamasına dikkat edin."
 
 #. module: product_variant_default_code
 #: field:product.product,reference_mask:0
 #: field:product.template,reference_mask:0
 msgid "Variant reference mask"
-msgstr ""
+msgstr "Çeşit Referans maskesi"
 

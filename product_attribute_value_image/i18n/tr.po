@@ -18,5 +18,5 @@ msgstr ""
 #. module: product_attribute_value_image
 #: field:product.attribute.value,image:0
 msgid "Image"
-msgstr ""
+msgstr "Image"
 

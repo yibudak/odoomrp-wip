@@ -163,8 +163,9 @@ class ProductAttributeValue(models.Model):
     @api.one
     @api.onchange('name')
     def onchange_name(self):
-        if self.name:
-            self.attribute_code = self.name[0:2]
+#        if self.name:
+#            self.attribute_code = self.name[0:2]
+        return
 
     attribute_code = fields.Char(
         string='Attribute Code', default=onchange_name)

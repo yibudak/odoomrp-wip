@@ -159,6 +159,14 @@ class ProductAttribute(models.Model):
 
 class ProductAttributeValue(models.Model):
     _inherit = 'product.attribute.value'
+    _order = "attribute_sequence,attribute_id,sequence,name"
+
+    # MIGRATION V9 or upper
+    # field below is now in product_attribute_priority
+    # put dependency on it
+    attribute_sequence = fields.Integer(
+        related="attribute_id.sequence",
+        store=True)
 
     @api.one
     @api.onchange('name')

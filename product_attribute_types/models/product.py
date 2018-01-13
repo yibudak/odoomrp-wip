@@ -48,8 +48,31 @@ class ProductAttributeValue(models.Model):
 
     @api.onchange('name')
     def onchange_name(self):
-        if self.attr_type == 'numeric' and not self.numeric_value:
+        if self.attr_type == 'numeric':
             try:
-                self.numeric_value = float(self.name)
+                self.numeric_value = float((''.join([c for c in self.name if c in '1234567890,.'])).replace(',', '.'))
             except Exception:
                 pass
+
+    @api.one
+    def write(self, vals):
+        if vals.get('name',False):
+            if vals.get('attr_type') == 'numeric' or self.attr_type == 'numeric':
+                if vals.get('numeric_value',0.0) == 0.0 or self.numeric_value == 0.00:
+                    try:
+                        vals['numeric_value'] = float((''.join([c for c in vals.get('name','') if c in '1234567890,.'])).replace(',', '.'))
+                    except Exception:
+                        pass
+        return super(ProductAttributeValue, self).write(vals)
+
+    @api.model
+    def create(self, vals):
+        create_vals = super(ProductAttributeValue, self).create(vals)
+        if vals.get('name',False):
+            if create_vals['attr_type'] == 'numeric':
+                if create_vals['numeric_value'] == 0.0:
+                    try:
+                        create_vals['numeric_value'] = float((''.join([c for c in vals.get('name','') if c in '1234567890,.'])).replace(',', '.'))
+                    except Exception:
+                        pass
+        return create_vals

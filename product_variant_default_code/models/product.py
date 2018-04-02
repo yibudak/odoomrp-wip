@@ -180,8 +180,9 @@ class ProductAttributeValue(models.Model):
 
     @api.model
     def create(self, values):
-        if 'attribute_code' not in values:
-            values['attribute_code'] = values.get('name', '')[0:2]
+#        if 'attribute_code' not in values:
+#            values['attribute_code'] = values.get('name', '')[0:2]
+
         value = super(ProductAttributeValue, self).create(values)
         return value
 

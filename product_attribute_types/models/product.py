@@ -51,6 +51,7 @@ class ProductAttributeValue(models.Model):
         if self.attr_type == 'numeric':
             try:
                 self.numeric_value = float((''.join([c for c in self.name if c in '1234567890,.'])).replace(',', '.'))
+                self.attribute_code = (''.join([c for c in self.name if c in '1234567890,.'])).replace(',', '').replace('.', '')
             except Exception:
                 pass
 
@@ -75,4 +76,12 @@ class ProductAttributeValue(models.Model):
                         create_vals['numeric_value'] = float((''.join([c for c in vals.get('name','') if c in '1234567890,.'])).replace(',', '.'))
                     except Exception:
                         pass
+
+                if create_vals['numeric_value'] != 0.0:
+                    try:
+                        create_vals['attribute_code'] = (''.join([c for c in vals.get('name','') if c in '1234567890,.'])).\
+                            replace(',','').replace('.', '')
+                    except Exception:
+                        pass
+
         return create_vals

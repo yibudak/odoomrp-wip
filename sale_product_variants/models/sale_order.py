@@ -137,3 +137,15 @@ class SaleOrderLine(models.Model):
             self._columns['product_tmpl_id'].store = True
             self._columns['product_tmpl_id'].readonly = False
         super(SaleOrderLine, self)._auto_init(cr, context=context)
+        
+    @api.multi
+    def write(self, vals):
+        vals = self._create_variant_from_vals(vals)
+        res = super(SaleOrderLine, self).write(vals)
+        return res
+    
+    @api.model
+    def create(self, vals):
+        vals = self._create_variant_from_vals(vals)
+        res = super(SaleOrderLine, self).create(vals)
+        return res

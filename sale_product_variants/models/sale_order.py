@@ -141,14 +141,16 @@ class SaleOrderLine(models.Model):
 
     @api.multi
     def write(self, vals):
-        if not vals.get('product_id',False):
+        if 'product_attribute_ids' in vals and not vals.get('product_id',False):
+            self.ensure_one()
             vals = self._create_variant_from_vals(vals)
+        
         res = super(SaleOrderLine, self).write(vals)
         return res
     
     @api.model
     def create(self, vals):
-        if not vals.get('product_id',False):
+        if 'product_attribute_ids' in vals and not vals.get('product_id',False):
             vals = self._create_variant_from_vals(vals)
         res = super(SaleOrderLine, self).create(vals)
         return res

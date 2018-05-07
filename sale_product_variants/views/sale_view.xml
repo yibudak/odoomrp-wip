@@ -36,6 +36,19 @@
                            attrs="{'invisible':[('product_attribute_ids','=',[])]}"
                     />
                 </xpath>
+                
+                <xpath expr="//field[@name='order_line']/form//field[@name='product_id']" position="replace">
+                    <label for="product_id"/>
+                    <div>
+	                    <field name="product_id" class="oe_inline" context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':False, 'company_id': parent.company_id}" groups="base.group_user" on_change="product_id_change_with_wh(parent.pricelist_id,product_id,product_uom_qty,False,product_uos_qty,False,name,parent.partner_id, False, True, parent.date_order, product_packaging, parent.fiscal_position, False, parent.warehouse_id, context)"/>
+	                   	<field name="create_variant" class="oe_inline" invisible="1"/>
+	                    <button name="button_create_variant" class="oe_inline"
+	                            string="Create variant"
+	                            type="object"
+	                            attrs="{'invisible': [('create_variant', '=', False)]}"
+	                            help="Create a new variant from selected attributes" />
+                	</div>
+                </xpath>
                 <xpath expr="//field[@name='order_line']//form//field[@name='price_unit']"
                        position="after">
                     <button name="update_price_unit"

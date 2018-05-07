@@ -3,7 +3,8 @@
 # © 2015-2016 Pedro M. Baeza <pedro.baeza@tecnativa.com>
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-from openerp import api, fields, models
+from openerp import api, fields, models, _
+from openerp.osv import fields as osvFields
 from lxml import etree
 
 
@@ -49,7 +50,12 @@ class SaleOrderLine(models.Model):
     order_state = fields.Selection(related='order_id.state', readonly=True)
     # Needed for getting the lang variable for translating descriptions
     partner_id = fields.Many2one(related='order_id.partner_id', readonly=True)
-
+    create_variant = fields.Boolean('Create variant?', default=False)
+    
+    _columns = {
+        'product_tmpl_id': osvFields.many2one('product.template', string='Product Template')
+    }
+    
     @api.multi
     def product_id_change(
             self, pricelist, product, qty=0, uom=False, qty_uos=0,
@@ -93,6 +99,33 @@ class SaleOrderLine(models.Model):
             fpos = self.order_id.partner_id.property_account_position
         self.tax_id = fpos.map_tax(self.product_tmpl_id.taxes_id)
         return res
+    
+    
+  
+      
+
+    @api.multi
+    @api.onchange('product_attribute_ids')
+    def onchange_product_attribute_ids(self):
+        res = super(SaleOrderLine, self).onchange_product_attribute_ids()
+        self.create_variant = not self.product_id.id and True or False
+        return res
+    
+    @api.multi
+    def button_create_variant(self):
+        self.ensure_one()
+        product_obj = self.env['product.product']
+        product = product_obj._product_find(
+                self.product_tmpl_id, self.product_attribute_ids)
+        if not product:
+            product = product_obj.create({
+                'product_tmpl_id': self.product_tmpl_id.id,
+                'attribute_value_ids':
+                    [(6, 0,
+                      self.product_attribute_ids.mapped('value_id').ids)]})
+        self.product_id = product
+        self.create_variant = False
+    
 
     @api.multi
     def action_duplicate(self):
@@ -130,27 +163,13 @@ class SaleOrderLine(models.Model):
                 self.product_tmpl_id.id, self.product_uom_qty or 1.0,
                 self.order_id.partner_id.id)[self.order_id.pricelist_id.id]
 
-    def _auto_init(self, cr, context=None):
+    #def _auto_init(self, cr, context=None):
         # Avoid the removal of the DB column due to sale_stock defining
         # this field as a related non stored one
-        if self._columns.get('product_tmpl_id'):
-            self._columns['product_tmpl_id'].store = True
-            self._columns['product_tmpl_id'].readonly = False
-        super(SaleOrderLine, self)._auto_init(cr, context=context)
+    #    if self._columns.get('product_tmpl_id'):
+    #        self._columns['product_tmpl_id'].store = True
+    #        self._columns['product_tmpl_id'].readonly = False
+    #    super(SaleOrderLine, self)._auto_init(cr, context=context)
         
 
-    @api.multi
-    def write(self, vals):
-        if not self.product_id and 'product_attribute_ids' in vals and not vals.get('product_id',False):
-            self.ensure_one()
-            vals = self._create_variant_from_vals(vals)
-        
-        res = super(SaleOrderLine, self).write(vals)
-        return res
-    
-    @api.model
-    def create(self, vals):
-        if 'product_attribute_ids' in vals and not vals.get('product_id',False):
-            vals = self._create_variant_from_vals(vals)
-        res = super(SaleOrderLine, self).create(vals)
-        return res
+

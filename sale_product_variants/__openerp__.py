@@ -11,6 +11,7 @@
     "depends": [
         "product",
         "sale",
+        "sale_stock",
         "product_variants_no_automatic_creation",
     ],
     "author": "OdooMRP team, "

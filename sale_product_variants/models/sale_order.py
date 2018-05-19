@@ -6,6 +6,7 @@
 from openerp import api, fields, models, _
 from openerp.osv import fields as osvFields
 from lxml import etree
+from openerp.exceptions import except_orm, Warning, RedirectWarning
 
 
 class SaleOrder(models.Model):
@@ -140,12 +141,14 @@ class SaleOrderLine(models.Model):
             product = product_obj._product_find(
                 line.product_tmpl_id, line.product_attribute_ids)
             if not product:
-                product = product_obj.create({
-                    'product_tmpl_id': line.product_tmpl_id.id,
-                    'attribute_value_ids':
-                        [(6, 0,
-                          line.product_attribute_ids.mapped('value_id').ids)]})
-            line.write({'product_id': product.id})
+                raise Warning(_("There are some order lines without product variant created. Please do by clicking"
+                                " Create Variant button."))
+#                product = product_obj.create({
+#                    'product_tmpl_id': line.product_tmpl_id.id,
+#                    'attribute_value_ids':
+#                        [(6, 0,
+#                          line.product_attribute_ids.mapped('value_id').ids)]})
+#            line.write({'product_id': product.id})
         super(SaleOrderLine, self).button_confirm()
 
     @api.multi

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-22 08:19+0000\n"
-"PO-Revision-Date: 2017-09-22 08:19+0000\n"
+"POT-Creation-Date: 2018-05-19 09:40+0000\n"
+"PO-Revision-Date: 2018-05-19 09:40+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,21 @@ msgstr ""
 #: view:sale.order:sale_product_variants.sale_order_extended_form_view
 msgid "(update)"
 msgstr "(güncelle)"
+
+#. module: sale_product_variants
+#: view:sale.order:sale_product_variants.sale_order_extended_form_view
+msgid "Create a new variant from selected attributes"
+msgstr "Seçilen özelliklerle yeni bir ürün oluştur."
+
+#. module: sale_product_variants
+#: view:sale.order:sale_product_variants.sale_order_extended_form_view
+msgid "Create variant"
+msgstr "Yeni Ürün Oluştur"
+
+#. module: sale_product_variants
+#: field:sale.order.line,create_variant:0
+msgid "Create variant?"
+msgstr "Yeni ürün Oluştur?"
 
 #. module: sale_product_variants
 #: field:sale.order.line,partner_id:0
@@ -83,6 +98,12 @@ msgstr "Durum"
 #: view:sale.order.line:sale_product_variants.sale_order_line_extended_search_view
 msgid "Template"
 msgstr "Şablon"
+
+#. module: sale_product_variants
+#: code:addons/sale_product_variants/models/sale_order.py:144
+#, python-format
+msgid "There are some order lines without product variant created. Please do by clicking Create Variant button."
+msgstr "Sipariş fişinde bazı kalemlere henüz ürün oluşturulmamış. Lütfen Ürün oluştur butonuna basarak yeni ürün oluşturun."
 
 #. module: sale_product_variants
 #: view:sale.order:sale_product_variants.sale_order_extended_form_view

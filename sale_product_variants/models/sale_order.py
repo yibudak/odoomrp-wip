@@ -68,18 +68,20 @@ class SaleOrderLine(models.Model):
             name=name, partner_id=partner_id, lang=lang, update_tax=update_tax,
             date_order=date_order, packaging=packaging,
             fiscal_position=fiscal_position, flag=flag)
-        new_value = self.onchange_product_id_product_configurator_old_api(
-            product_id=product, partner_id=partner_id)
-        value = res.setdefault('value', {})
-        value.update(new_value)
-        if product:
-            product_obj = self.env['product.product']
-            if partner_id:
-                partner = self.env['res.partner'].browse(partner_id)
-                product_obj = product_obj.with_context(lang=partner.lang)
-            prod = product_obj.browse(product)
-            if prod.description_sale:
-                value['name'] += '\n' + prod.description_sale
+        
+        if not self._context.get('skip_product_attributes',False):
+            new_value = self.onchange_product_id_product_configurator_old_api(
+                product_id=product, partner_id=partner_id)
+            value = res.setdefault('value', {})
+            value.update(new_value)
+            if product:
+                product_obj = self.env['product.product']
+                if partner_id:
+                    partner = self.env['res.partner'].browse(partner_id)
+                    product_obj = product_obj.with_context(lang=partner.lang)
+                prod = product_obj.browse(product)
+                if prod.description_sale:
+                    value['name'] += '\n' + prod.description_sale
         return res
 
     @api.multi

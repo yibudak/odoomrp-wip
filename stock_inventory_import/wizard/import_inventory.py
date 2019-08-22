@@ -78,14 +78,16 @@ class ImportInventory(models.TransientModel):
                                                values['location'])])
                 if locations:
                     prod_location = locations[:1].id
-            prod_lst = product_obj.search([('default_code', '=',
-                                            values['code'])])
+            if 'code' in values and values['code']:
+                prod_lst = product_obj.search([('default_code', '=', values['code'])])
             if prod_lst:
                 val['product'] = prod_lst[0].id
             if 'lot' in values and values['lot']:
                 val['lot'] = values['lot']
-            val['code'] = values['code']
-            val['quantity'] = values['quantity']
+            if 'code' in values and values['code']:
+                val['code'] = values['code']
+            if 'quantity' in values and values['quantity']:
+                val['quantity'] = values['quantity']
             val['location_id'] = prod_location
             val['inventory_id'] = inventory.id
             val['fail'] = True

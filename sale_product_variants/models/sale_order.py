@@ -87,7 +87,10 @@ class SaleOrderLine(models.Model):
     @api.multi
     @api.onchange('product_tmpl_id')
     def onchange_product_tmpl_id(self):
+        
+        self._context.update({'not_reset_product': self.product_id.product_tmpl_id.id == self.product_tmpl_id.id})
         res = super(SaleOrderLine, self).onchange_product_tmpl_id()
+            
         if self.product_tmpl_id.attribute_line_ids:
             self.product_uom = self.product_tmpl_id.uom_id
             self.product_uos = self.product_tmpl_id.uos_id

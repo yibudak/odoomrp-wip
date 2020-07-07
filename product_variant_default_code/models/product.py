@@ -186,19 +186,19 @@ class ProductAttributeValue(models.Model):
         value = super(ProductAttributeValue, self).create(values)
         return value
 
-    @api.one
-    def write(self, vals):
-        attribute_line_obj = self.env['product.attribute.line']
-        product_obj = self.env['product.product']
-        result = super(ProductAttributeValue, self).write(vals)
-        if 'attribute_code' in vals:
-            cond = [('attribute_id', '=', self.attribute_id.id)]
-            attribute_lines = attribute_line_obj.search(cond)
-            for line in attribute_lines:
-                cond = [('product_tmpl_id', '=', line.product_tmpl_id.id),
-                        ('manual_code', '=', False)]
-                products = product_obj.search(cond)
-                for product in products:
-                    if product.reference_mask:
-                        render_default_code(product, product.reference_mask)
-        return result
+   # @api.one
+   # def write(self, vals):
+   #     attribute_line_obj = self.env['product.attribute.line']
+   #     product_obj = self.env['product.product']
+   #     result = super(ProductAttributeValue, self).write(vals)
+   #     if 'attribute_code' in vals:
+   #         cond = [('attribute_id', '=', self.attribute_id.id)]
+   #         attribute_lines = attribute_line_obj.search(cond)
+   #         for line in attribute_lines:
+   #             cond = [('product_tmpl_id', '=', line.product_tmpl_id.id),
+   #                     ('manual_code', '=', False)]
+   #             products = product_obj.search(cond)
+   #             for product in products:
+   #                 if product.reference_mask:
+   #                     render_default_code(product, product.reference_mask)
+   #     return result
